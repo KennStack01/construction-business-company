@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 const ContactInfo = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query {
       allGraphCmsCompanyContactInformation(limit: 1) {
         edges {
           node {
