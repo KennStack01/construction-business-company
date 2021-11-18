@@ -6,26 +6,26 @@ import { HiOutlineMail } from "react-icons/hi"
 import { AiOutlineFieldTime } from "react-icons/ai"
 
 const ContactBarInfo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allGraphCmsCompanyContactInformation(limit: 1) {
-        edges {
-          node {
-            phoneNumber1
-            phoneNumber2
-            email1
-            notreAdresse
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allGraphCmsCompanyContactInformation(limit: 1) {
+  //       edges {
+  //         node {
+  //           phoneNumber1
+  //           phoneNumber2
+  //           email1
+  //           notreAdresse
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const contactInfo = data.allGraphCmsCompanyContactInformation.edges[0].node
+  // const contactInfo = data.allGraphCmsCompanyContactInformation.edges[0].node
 
   return (
     <div className="flex flex-row justify-center bg-white p-2 w-full text-sadi-blue-600 text-xs">
-      <div className="flex flex-row mx-2 md:mx-4">
+      {/* <div className="flex flex-row mx-2 md:mx-4">
         <div className="my-auto text-xl mx-2">
           <RiPhoneFill />
         </div>
@@ -55,7 +55,7 @@ const ContactBarInfo = () => {
           <h5>Disponible</h5>
           <p className="font-semibold">Lun-Sam: 8h00 - 16h00</p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
