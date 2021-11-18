@@ -2,22 +2,22 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
 const ContactInfo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      graphCmsCompanyContactInformation {
-        phoneNumber1
-        phoneNumber2
-        email1
-        notreAdresse
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     graphCmsCompanyContactInformation {
+  //       phoneNumber1
+  //       phoneNumber2
+  //       email1
+  //       notreAdresse
+  //     }
+  //   }
+  // `)
 
-  const contactData = data.graphCmsCompanyContactInformation
+  // const contactData = data.graphCmsCompanyContactInformation
 
   return (
     <div className="md:w-1/3 my-10 md:my-24 bg-sadi-blue-600 text-white p-2 md:p-5 rounded-sm">
-      <h1 className=" text-3xl font-semibold text-center">
+      {/* <h1 className=" text-3xl font-semibold text-center">
         {" "}
         Nos Informations{" "}
       </h1>
@@ -47,7 +47,7 @@ const ContactInfo = () => {
             Entrez en Contact
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
