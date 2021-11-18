@@ -1,6 +1,8 @@
+@tailwind components;
+@tailwind utilities;
 @tailwind base;
 
-h1 {
+/* h1 {
   @apply text-2xl;
 }
 h2 {
@@ -8,10 +10,11 @@ h2 {
 }
 h3 {
   @apply text-lg;
-}
-a {
+} */
+/* a {
   @apply text-blue-600;
-}
+} */
 
-@tailwind components;
-@tailwind utilities;
+.mission {
+  overflow-x: hidden;
+}

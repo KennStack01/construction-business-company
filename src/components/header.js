@@ -1,73 +1,152 @@
+import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
+import { useState } from "react"
+import cn from "classnames"
+import { CgClose } from "react-icons/cg"
+import { RiMenu3Fill } from "react-icons/ri"
+import { StaticImage } from "gatsby-plugin-image"
 
-function Header({ siteTitle }) {
-  const [isExpanded, toggleExpansion] = useState(false)
+const activeLinkStyles = {
+  // backgroundColor: "#E2DF00",
+  backgroundColor: "#FCD34D",
+  textColor: "white",
+  cursor: "pointer",
+}
+
+export default function Header() {
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
-          {siteTitle}
-        </span>
-      </div>
-      <div className="block lg:hidden">
+    <header className="sticky top-0 z-50 w-full text-back-color-600 bg-white shadow-sm p-0">
+      <div className="flex flex-row justify-between mx-2 md:mx-4">
+        <div className="flex items-center my-auto">
+          <Link to="/">
+            {/* <div style={{ maxWidth: `120px`, marginBottom: `1.45rem` }}> */}
+            <div className=" w-28">
+              <StaticImage src="../images/sadi-logo.png" alt="SADI SARL Logo" />
+            </div>
+          </Link>
+        </div>
+
         <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
+          className="items-center block px-3 py-2 my-auto  border rounded lg:hidden"
+          onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          {mobileMenuIsOpen ? <CgClose /> : <RiMenu3Fill />}
         </button>
-      </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
-      >
-        <div className="text-sm lg:flex-grow">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+
+        <div className="my-auto hidden lg:flex flex-row justify-between">
+          <div
+            className={cn(
+              // "sm:grid grid-cols-2 my-auto md:mt-2 z-10 hidden lg:flex lg:flex-row lg:items-center md:justify-center text-sm w-full md:w-auto",
+              "flex flex-row items-center justify-center text-md text-sadi-blue-600"
+              // mobileMenuIsOpen ? `block` : `hidden`
+            )}
           >
-            Home
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            page 2
-          </Link>
+            <Link
+              to="/"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Accueil</h5>
+            </Link>
+
+            <Link
+              to="/services"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Services</h5>
+            </Link>
+
+            <Link
+              to="/realisations"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Réalisations</h5>
+            </Link>
+
+            <Link
+              to="/actu"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Actualités</h5>
+            </Link>
+
+            <Link
+              to="/contact"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Contact</h5>
+            </Link>
+          </div>
         </div>
-        <div>
-          <a
-            href="https://github.com/kosvrouvas/gatsby-tailwindcss-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
+
+        <div
+          className={
+            mobileMenuIsOpen
+              ? "absolute z-20 mt-12 md:mt-16 flex flex-col lg:hidden bg-white mx-auto w-full py-3 px-2 text-sm"
+              : "hidden"
+          }
+        >
+          <div
+            className={
+              mobileMenuIsOpen
+                ? `grid grid-cols-2 place-content-center`
+                : `hidden`
+            }
           >
-            Download
-          </a>
+            <Link
+              to="/"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Accueil</h5>
+            </Link>
+            <Link
+              to="/services"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Services</h5>
+            </Link>
+            <Link
+              to="/realisations"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Réalisations</h5>
+            </Link>
+            <Link
+              to="/actu"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Actualités</h5>
+            </Link>
+            <Link
+              to="/contact"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Contact</h5>
+            </Link>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
