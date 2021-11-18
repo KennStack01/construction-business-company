@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby TailwindCSS Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter with TailwindCSS and common dev tools. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@kosvrouvas`,
+    title: `SADI SARL`,
+    description: `Entreprise avec une Grande Mission d'accompagnement pour le Développement de la RD Congo`,
+    author: `SADI SARL`,
   },
   flags: {
     THE_FLAG: false,
@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SADI SARL Compnay`,
+        name: `SADI SARL Company`,
         short_name: `SADI SARL`,
         start_url: `/`,
         background_color: `#06719e`,
