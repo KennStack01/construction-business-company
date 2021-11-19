@@ -1,9 +1,21 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import { BsFacebook, BsInstagram, BsYoutube, BsSunFill } from "react-icons/bs"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { BsFacebook, BsInstagram, BsLinkedin, BsSunFill } from "react-icons/bs"
 import { FaMoon } from "react-icons/fa"
 
+const query = graphql`
+  query {
+    graphCmsCompanyContactInformation {
+      facebookPageLink
+      instagramPageLink
+      linkedInPageLink
+    }
+  }
+`
+
 const Footer = () => {
+  const data = useStaticQuery(query)
+
   return (
     <div className="divide-y divide-white text-white bg-sadi-blue-700 py-2 md:py-5 px-2 md:px-20 w-full">
       <div className="flex flex-col">
@@ -74,7 +86,7 @@ const Footer = () => {
           </h1>
           <div className="flex flex-row mx-auto">
             <a
-              href="https://www.linkedin.com/in/kennkibadi/"
+              href={data.graphCmsCompanyContactInformation.facebookPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >
@@ -83,7 +95,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href="https://www.linkedin.com/in/kennkibadi/"
+              href={data.graphCmsCompanyContactInformation.instagramPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >
@@ -92,12 +104,12 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href="https://www.linkedin.com/in/kennkibadi/"
+              href={data.graphCmsCompanyContactInformation.linkedInPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >
               <div className="text-2xl lg:text-3xl my-auto">
-                <BsYoutube />
+                <BsLinkedin />
               </div>
             </a>
           </div>

@@ -10,7 +10,7 @@ fragment CompanyContactInformation on CompanyContactInformation {
   email2
   facebookPageLink
   instagramPageLink
-  twitterLink
+  linkedInPageLink
   notreAdresse
   createdBy {
     ... on User {
