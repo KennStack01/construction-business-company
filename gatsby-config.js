@@ -10,6 +10,7 @@ module.exports = {
   },
   flags: {
     THE_FLAG: false,
+    PARALLEL_QUERY_RUNNING: true,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
