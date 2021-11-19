@@ -2,21 +2,23 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Service from "./Service"
 
-const ServicesList = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allGraphCmsCompanyService {
-        edges {
-          node {
-            titreDuService
-            shortDescription
-            slug
-            id
-          }
+const query = graphql`
+  query {
+    allGraphCmsCompanyService {
+      edges {
+        node {
+          titreDuService
+          shortDescription
+          slug
+          id
         }
       }
     }
-  `)
+  }
+`
+
+const ServicesList = () => {
+  const data = useStaticQuery(query)
 
   const allServices = data.allGraphCmsCompanyService.edges.map(
     ({ node }) => node

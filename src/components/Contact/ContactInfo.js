@@ -1,17 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
-const ContactInfo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      graphCmsCompanyContactInformation {
-        phoneNumber1
-        phoneNumber2
-        email1
-        notreAdresse
-      }
+const query = graphql`
+  query {
+    graphCmsCompanyContactInformation {
+      phoneNumber1
+      phoneNumber2
+      email1
+      notreAdresse
     }
-  `)
+  }
+`
+
+const ContactInfo = () => {
+  const data = useStaticQuery(query)
 
   const contactData = data.graphCmsCompanyContactInformation
 

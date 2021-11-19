@@ -1,20 +1,22 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-const NotreExperience = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      graphCmsNotreExperience {
-        imageTeam {
-          url
-        }
-        greatTitle
-        descriptionDeLExperience
-        motDuPresident
-        nomDuPresident
+const query = graphql`
+  query {
+    graphCmsNotreExperience {
+      imageTeam {
+        url
       }
+      greatTitle
+      descriptionDeLExperience
+      motDuPresident
+      nomDuPresident
     }
-  `)
+  }
+`
+
+const NotreExperience = () => {
+  const data = useStaticQuery(query)
 
   const content = data.graphCmsNotreExperience
 

@@ -2,18 +2,20 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
-const Mission = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      graphCmsMissionDescription {
-        title
-        textDescription
-        sideImage {
-          url
-        }
+const query = graphql`
+  query {
+    graphCmsMissionDescription {
+      title
+      textDescription
+      sideImage {
+        url
       }
     }
-  `)
+  }
+`
+
+const Mission = () => {
+  const data = useStaticQuery(query)
 
   return (
     <div className="mission flex flex-col md:flex-row bg-white p-0 rounded-md shadow-sm pt-4 sm:pt-0 my-8 md:my-16 mx-4 mr-4 md:mx-20">

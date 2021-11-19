@@ -5,21 +5,23 @@ import { RiPhoneFill } from "react-icons/ri"
 import { HiOutlineMail } from "react-icons/hi"
 import { AiOutlineFieldTime } from "react-icons/ai"
 
-const ContactBarInfo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allGraphCmsCompanyContactInformation(limit: 1) {
-        edges {
-          node {
-            phoneNumber1
-            phoneNumber2
-            email1
-            notreAdresse
-          }
+const query = graphql`
+  query {
+    allGraphCmsCompanyContactInformation(limit: 1) {
+      edges {
+        node {
+          phoneNumber1
+          phoneNumber2
+          email1
+          notreAdresse
         }
       }
     }
-  `)
+  }
+`
+
+const ContactBarInfo = () => {
+  const data = useStaticQuery(query)
 
   const contactInfo = data.allGraphCmsCompanyContactInformation.edges[0].node
 

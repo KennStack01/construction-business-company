@@ -3,19 +3,21 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import ReactTypingEffect from "react-typing-effect"
 import { RiPhoneFill } from "react-icons/ri"
 
-const HeroSection = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      graphCmsHomeBanner {
-        greatWelcomeText
-        welcomeTextDescription
-        imageBackground {
-          fileName
-          url
-        }
+const query = graphql`
+  query {
+    graphCmsHomeBanner {
+      greatWelcomeText
+      welcomeTextDescription
+      imageBackground {
+        fileName
+        url
       }
     }
-  `)
+  }
+`
+
+const HeroSection = () => {
+  const data = useStaticQuery(query)
 
   const image = data.graphCmsHomeBanner.imageBackground.url
   const greatWelcomeText = data.graphCmsHomeBanner.greatWelcomeText
