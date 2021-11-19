@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 const query = graphql`
   query {
-    graphCmsCompanyContactInformation {
+    graphCmsContactInformation {
       phoneNumber1
       phoneNumber2
       email1
@@ -15,7 +15,7 @@ const query = graphql`
 const ContactInfo = () => {
   const data = useStaticQuery(query)
 
-  const contactData = data.graphCmsCompanyContactInformation
+  const contactData = data.graphCmsContactInformation
 
   return (
     <div className="md:w-1/3 my-10 md:my-24 bg-sadi-blue-600 text-white p-2 md:p-5 rounded-sm">

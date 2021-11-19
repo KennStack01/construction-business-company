@@ -53,15 +53,15 @@ fragment Asset on Asset {
       stage
     }
   }
-  clientLogoClientPartenaire {
-    ... on ClientPartenaire {
+  imageTeamNotreExperience {
+    ... on NotreExperience {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  imageTeamNotreExperience {
-    ... on NotreExperience {
+  clientLogoCompanyClient {
+    ... on CompanyClient {
       remoteTypeName: __typename
       remoteId: id
       stage

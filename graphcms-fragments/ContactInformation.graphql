@@ -1,4 +1,4 @@
-fragment CompanyContactInformation on CompanyContactInformation {
+fragment ContactInformation on ContactInformation {
   stage
   remoteId: id
   createdAt

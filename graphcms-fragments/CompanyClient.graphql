@@ -1,4 +1,4 @@
-fragment ClientPartenaire on ClientPartenaire {
+fragment CompanyClient on CompanyClient {
   stage
   remoteId: id
   createdAt
