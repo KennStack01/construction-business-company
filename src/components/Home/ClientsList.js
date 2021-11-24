@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   query {
-    allGraphCmsCompanyClient {
+    allDatoCmsCompanyClient {
       edges {
         node {
           clientLogo {
@@ -20,7 +20,7 @@ const query = graphql`
 const ClientsList = () => {
   const data = useStaticQuery(query)
 
-  const clients = data.allGraphCmsCompanyClient.edges.map(({ node }) => node)
+  const clients = data.allDatoCmsCompanyClient.edges.map(({ node }) => node)
 
   return (
     <div>

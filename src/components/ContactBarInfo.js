@@ -7,7 +7,7 @@ import { AiOutlineFieldTime } from "react-icons/ai"
 
 const query = graphql`
   query {
-    allGraphCmsContactInformation(limit: 1) {
+    allDatoCmsContactInformation(limit: 1) {
       edges {
         node {
           phoneNumber1
@@ -23,7 +23,7 @@ const query = graphql`
 const ContactBarInfo = () => {
   const data = useStaticQuery(query)
 
-  const contactInfo = data.allGraphCmsContactInformation.edges[0].node
+  const contactInfo = data.allDatoCmsContactInformation.edges[0].node
 
   return (
     <div className="flex flex-row justify-center bg-white p-2 w-full text-sadi-blue-600 text-xs">

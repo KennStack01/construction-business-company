@@ -3,13 +3,21 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   query {
-    graphCmsNotreExperience {
+    datoCmsNotreExpRience {
       imageTeam {
         url
       }
       greatTitle
-      descriptionDeLExperience
-      motDuPresident
+      descriptionDeLExperienceNode {
+        internal {
+          content
+        }
+      }
+      motDuPresidentNode {
+        internal {
+          content
+        }
+      }
       nomDuPresident
     }
   }
@@ -18,7 +26,7 @@ const query = graphql`
 const NotreExperience = () => {
   const data = useStaticQuery(query)
 
-  const content = data.graphCmsNotreExperience
+  const content = data.datoCmsNotreExpRience
 
   return (
     <div className="w-full bg-sadi-blue-600 my-10 text-white">
@@ -33,10 +41,12 @@ const NotreExperience = () => {
             {content.greatTitle}
           </h1>
           <p className="text-justify text-sm mx-5">
-            {content.descriptionDeLExperience}
+            {content.descriptionDeLExperienceNode.internal.content}
           </p>
           <div className="flex flex-col justify-center mt-6 mx-5 md:mx-20 tex-center">
-            <p className="text-xs italic">"{content.motDuPresident}"</p>
+            <p className="text-xs italic">
+              "{content.motDuPresidentNode.internal.content}"
+            </p>
             <div className="flex flex-col my-2 text-right text-xs ">
               <h5 className="font-semibold">{content.nomDuPresident},</h5>
               <p className=" font-light">

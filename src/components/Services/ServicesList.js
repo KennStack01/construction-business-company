@@ -4,11 +4,15 @@ import Service from "./Service"
 
 const query = graphql`
   query {
-    allGraphCmsCompanyService {
+    allDatoCmsCompanyService {
       edges {
         node {
           titreDuService
-          shortDescription
+          shortDescriptionNode {
+            internal {
+              content
+            }
+          }
           slug
           id
         }
@@ -20,7 +24,7 @@ const query = graphql`
 const ServicesList = () => {
   const data = useStaticQuery(query)
 
-  const allServices = data.allGraphCmsCompanyService.edges.map(
+  const allServices = data.allDatoCmsCompanyService.edges.map(
     ({ node }) => node
   )
 
@@ -34,7 +38,7 @@ const ServicesList = () => {
           <Service
             key={service.id}
             title={service.titreDuService}
-            description={service.shortDescription}
+            description={service.shortDescriptionNode.internal.content}
             slug={service.slug}
           />
         ))}

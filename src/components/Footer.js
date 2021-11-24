@@ -5,10 +5,10 @@ import { FaMoon } from "react-icons/fa"
 
 const query = graphql`
   query {
-    graphCmsContactInformation {
+    datoCmsContactInformation {
       facebookPageLink
       instagramPageLink
-      linkedInPageLink
+      linkedinPageLink
     }
   }
 `
@@ -86,7 +86,7 @@ const Footer = () => {
           </h1>
           <div className="flex flex-row mx-auto">
             <a
-              href={data.graphCmsContactInformation.facebookPageLink}
+              href={data.datoCmsContactInformation.facebookPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >
@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href={data.graphCmsContactInformation.instagramPageLink}
+              href={data.datoCmsContactInformation.instagramPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >
@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href={data.graphCmsContactInformation.linkedInPageLink}
+              href={data.datoCmsContactInformation.linkedInPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >

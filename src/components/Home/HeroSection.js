@@ -5,12 +5,12 @@ import { RiPhoneFill } from "react-icons/ri"
 
 const query = graphql`
   query {
-    graphCmsHomeBanner {
+    datoCmsHomeBanner {
       greatWelcomeText
       welcomeTextDescription
       imageBackground {
-        fileName
         url
+        filename
       }
     }
   }
@@ -19,11 +19,11 @@ const query = graphql`
 const HeroSection = () => {
   const data = useStaticQuery(query)
 
-  const image = data.graphCmsHomeBanner.imageBackground.url
-  const greatWelcomeText = data.graphCmsHomeBanner.greatWelcomeText
-  const welcomeTextDescription = data.graphCmsHomeBanner.welcomeTextDescription
+  const image = data.datoCmsHomeBanner.imageBackground.url
+  const greatWelcomeText = data.datoCmsHomeBanner.greatWelcomeText
+  const welcomeTextDescription = data.datoCmsHomeBanner.welcomeTextDescription
 
-  // console.log(data.graphCmsHomeBanner)
+  // console.log(data.datoCmsHomeBanner)
 
   return (
     <div className="mt-0 w-full text-white">
