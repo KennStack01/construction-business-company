@@ -27,10 +27,21 @@ const IndexPage = () => {
       </Link>
       <Mission />
       <ServicesList />
+      <Link
+        to="/services"
+        className="flex flex-row my-8 w-48 mx-auto justify-center text-center bg-sadi-blue-500 hover:bg-sadi-blue-400 text-sm md:text-xl text-white font-semibold p-2 rounded-md"
+      >
+        <h5 className="my-auto mx-1">Voir plus</h5>
+      </Link>
       <ClientsList />
       <NotreExperience />
       <div className="flex flex-col md:flex-row justify-center">
-        <Form />
+        <div className="w-full md:w-2/3">
+          <h1 className="text-2xl font-semibold text-center">
+            Contactez-nous 👇
+          </h1>
+          <Form />
+        </div>
         <ContactInfo />
       </div>
     </Layout>

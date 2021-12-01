@@ -4,8 +4,7 @@ import { BiMailSend } from "react-icons/bi"
 
 const Form = () => {
   return (
-    <div className="w-full md:w-2/3">
-      <h1 className="text-2xl font-semibold text-center">Contactez-nous 👇</h1>
+    <div className="">
       <div className="bg-white shadow rounded p-8 mx-1 md:m-4 md:w-1/2 md:mx-auto">
         <form
           className="mb-4 md:justify-between"
