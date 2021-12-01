@@ -46,7 +46,7 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 w-full">
+          <div className="flex flex-col md:grid grid-cols-2 w-full">
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
