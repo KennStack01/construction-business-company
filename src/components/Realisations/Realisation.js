@@ -5,7 +5,7 @@ const Realisation = ({ imageSrc, title, description, slug }) => {
   return (
     <Link
       to={`/realisations/${slug}`}
-      className="mx-1 md:mx-2 my-6 relative   transform transition duration-500 hover:scale-105"
+      className="mx-1 md:mx-0 my-6 relative   transform transition duration-500 hover:scale-105"
     >
       <img
         src={imageSrc}

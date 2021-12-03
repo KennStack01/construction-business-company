@@ -12,7 +12,7 @@ const Contact = () => (
       Nous sommes disponibles pour vous aider
     </h1>
     <div className="flex flex-col md:flex-row justify-center">
-      <Form width="2/5" />
+      <Form width="3/5" />
       <ContactInfo />
     </div>
   </Layout>
