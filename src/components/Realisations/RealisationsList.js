@@ -42,7 +42,7 @@ const RealisationsList = () => {
       </div>
 
       {/* <div className="flex flex-col justify-center sm:grid sm:grid-cols-2 "> */}
-      <div className="flex flex-col justify-center md:grid grid-cols-2 ">
+      <div className="flex flex-col justify-center md:grid grid-cols-2 lg:grid-cols-3 ">
         {allProjects.map(project => (
           <Realisation
             key={project.id}
