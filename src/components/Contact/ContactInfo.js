@@ -22,7 +22,7 @@ const ContactInfo = () => {
   const contactData = data.datoCmsContactInformation
 
   return (
-    <div className="md:w-1/3 my-10 md:my-24 bg-sadi-blue-600 text-white p-2 md:p-5 rounded-sm">
+    <div className="md:w-1/3 mx-auto my-10 md:my-24 bg-sadi-blue-600 text-white p-2 md:p-5 rounded-sm">
       <h1 className=" text-3xl font-semibold text-center">
         {" "}
         Nos Informations{" "}
