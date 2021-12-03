@@ -2,16 +2,18 @@
 import React from "react"
 import { BiMailSend } from "react-icons/bi"
 
-const Form = () => {
+const Form = ({ width = "1/2" }) => {
   return (
-    <div className="">
-      <div className="bg-white shadow rounded p-8 mx-1 md:m-4 md:w-1/2 md:mx-auto">
+    <div
+      className={`bg-white shadow rounded p-8 mx-2 md:mx-auto md:m-4 md:w-${width}`}
+    >
+      <div className="md:mx-auto w-full">
         <form
           className="mb-4 md:justify-between"
           method="post"
           action={`https://getform.io/f/1179f6c4-451a-4658-aef8-51f1689df515`}
         >
-          <div className="grid grid-cols-2 w-full">
+          <div className="flex flex-col w-full">
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
@@ -46,7 +48,7 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:grid grid-cols-2 w-full">
+          <div className="flex flex-col w-full">
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"

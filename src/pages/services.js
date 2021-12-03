@@ -20,9 +20,8 @@ const Services = () => (
       <h1 className="text-2xl font-semibold text-center text-white">
         N'hésitez jamais de nous contacter
       </h1>
-      <div className="mx-0 md:mx-auto md:w-3/4">
-        <Form />
-      </div>
+      <Form width="1/3" />
+      <div className="mx-auto md:w-2/3"></div>
     </div>
   </Layout>
 )
