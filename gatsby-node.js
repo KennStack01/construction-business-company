@@ -10,6 +10,13 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           }
         }
       }
+      allDatoCmsCompanyService {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
     .then(result => {
@@ -25,17 +32,15 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         })
       })
 
-      //   result.data.allDatoCmsCompanyService.edges.forEach(({ node }) => {
-      //     createPage({
-      //       component: path.resolve(
-      //         `./src/components/Services/ServicePageContent.js`
-      //       ),
-      //       path: `/services/${node.slug}`,
-      //       context: {
-      //         slug: node.slug,
-      //       },
-      //     })
-      //   })
+      result.data.allDatoCmsCompanyService.edges.forEach(({ node }) => {
+        createPage({
+          component: path.resolve(`./src/components/Services/PageContent.js`),
+          path: `/services/${node.slug}`,
+          context: {
+            slug: node.slug,
+          },
+        })
+      })
     })
     .catch(error => {
       console.log(error.message)
