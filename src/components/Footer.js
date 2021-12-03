@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href={data.datoCmsContactInformation.linkedInPageLink}
+              href={data.datoCmsContactInformation.instagramPageLink}
               target="__blank"
               className="mx-1 my-auto"
             >

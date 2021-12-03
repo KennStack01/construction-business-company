@@ -25,12 +25,12 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         })
       })
 
-      //   result.data.allDatoCmsRecitEtPoesie.edges.forEach(({ node }) => {
+      //   result.data.allDatoCmsCompanyService.edges.forEach(({ node }) => {
       //     createPage({
       //       component: path.resolve(
-      //         `./src/templates/RecitsEtPoesie/TemplateFoRecit.js`
+      //         `./src/components/Services/ServicePageContent.js`
       //       ),
-      //       path: `/recits/${node.slug}`,
+      //       path: `/services/${node.slug}`,
       //       context: {
       //         slug: node.slug,
       //       },
