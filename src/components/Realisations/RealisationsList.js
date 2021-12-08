@@ -30,7 +30,7 @@ const RealisationsList = () => {
     <div>
       <div className="my-8">
         <h1 className="text-2xl md:text-4xl text-center my-10 md:my-16 text-sadi-blue-500 font-bold justify-self-start">
-          Projet la plus récente
+          Réalisation la plus récente
         </h1>
       </div>
 
