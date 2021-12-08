@@ -4,7 +4,7 @@ const ContentHeroSection = ({ title, description }) => {
   return (
     <div className="mt-0 w-full text-white bg-sadi-blue-500 py-10 md:py-12">
       <div className="flex flex-col">
-        <h1 className="text-3xl md:text-4xl lg:text-7xl text-center md:text-left font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-2/3">
+        <h1 className="text-2xl md:text-4xl lg:text-7xl text-center md:text-left font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-2/3">
           {title}
         </h1>
         <br />

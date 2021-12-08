@@ -38,7 +38,7 @@ const HeroSection = () => {
           />
         </h1>
         <br />
-        <p className="text-md md:text-xl font-medium z-40 mt-10 mb-8 md:w-2/3 mx-auto hidden md:block">
+        <p className="text-md md:text-2xl font-medium z-40 mt-10 mb-8 md:w-2/3 mx-auto hidden md:block">
           {welcomeTextDescription}
         </p>
 
