@@ -14,7 +14,7 @@ import ContactInfo from "../components/Contact/ContactInfo"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Accueil" />
 
       <HeroSection />
 
