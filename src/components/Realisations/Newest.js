@@ -22,7 +22,7 @@ const Newest = ({ imageSrc, title, slug, description }) => {
           </div>
         </Link>
         <div className="flex flex-col">
-          <Link to={`/blog/${slug}`}>
+          <Link to={`/realisations/${slug}`}>
             <p className="text-sm"> {description.substring(0, 900)}... </p>
           </Link>
         </div>
