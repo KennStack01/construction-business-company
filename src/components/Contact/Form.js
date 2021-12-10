@@ -2,7 +2,7 @@
 import React from "react"
 import { BiMailSend } from "react-icons/bi"
 
-const Form = ({ width = "1/2" }) => {
+const Form = ({ width = "2/3" }) => {
   return (
     <div
       className={`bg-white shadow rounded p-8 mx-2 md:mx-auto md:m-4 md:w-${width}`}
