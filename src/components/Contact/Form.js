@@ -11,7 +11,7 @@ const Form = ({ width = "1/2" }) => {
         <form
           className="mb-4 md:justify-between"
           method="post"
-          action={`https://getform.io/f/1179f6c4-451a-4658-aef8-51f1689df515`}
+          action={`https://getform.io/f/d48a0ae6-185e-44fc-afd5-74544ecea9c1`}
         >
           <div className="flex flex-col w-full">
             <div className="flex flex-col mb-4 text-sm">
@@ -99,10 +99,10 @@ const Form = ({ width = "1/2" }) => {
               required
             ></textarea>
           </div>
-          {/* <div
+          <div
             className="g-recaptcha"
-            data-sitekey="6LdfzqcUAAAAALrt3ztxWifjPoaMWFIwES_JV9u2"
-          ></div> */}
+            data-sitekey="6Ldzb5IdAAAAAE0MWN7_Ejf3SFYXwGhWCbJsZ3-F"
+          ></div>
 
           <div className="mt-10 md:mx-auto">
             <button
