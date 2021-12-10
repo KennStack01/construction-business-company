@@ -12,7 +12,7 @@ const Contact = () => (
       Vous pouvez nous écrire directement par ce Formulaire
     </h1>
     <div className="flex flex-col justify-center">
-      <Form width="3/5" />
+      <Form />
       <ContactInfo />
     </div>
   </Layout>
