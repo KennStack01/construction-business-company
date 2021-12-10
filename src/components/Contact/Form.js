@@ -11,7 +11,7 @@ const Form = ({ width = "2/3" }) => {
         <form
           className="mb-4 md:justify-between"
           method="post"
-          action={`https://getform.io/f/d48a0ae6-185e-44fc-afd5-74544ecea9c1`}
+          action="https://getform.io/f/d48a0ae6-185e-44fc-afd5-74544ecea9c1"
         >
           <div className="flex flex-col w-full">
             <div className="flex flex-col mb-4 text-sm">
