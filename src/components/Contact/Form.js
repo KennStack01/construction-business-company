@@ -99,10 +99,10 @@ const Form = ({ width = "2/3" }) => {
               required
             ></textarea>
           </div>
-          <div
+          {/* <div
             className="g-recaptcha"
             data-sitekey="6Ldzb5IdAAAAAE0MWN7_Ejf3SFYXwGhWCbJsZ3-F"
-          ></div>
+          ></div> */}
 
           <div className="mt-10 md:mx-auto">
             <button
