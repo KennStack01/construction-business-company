@@ -10,14 +10,14 @@ const Form = ({ width = "2/3" }) => {
       <div className="md:mx-auto w-full">
         <form
           className="mb-4 md:justify-between"
-          method="post"
+          method="POST"
           action="https://getform.io/f/d48a0ae6-185e-44fc-afd5-74544ecea9c1"
         >
           <div className="flex flex-col w-full">
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="name"
+                htmlFor="Nom Complet"
               >
                 Nom Complet
               </label>
@@ -33,7 +33,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="email"
+                htmlFor="Email"
               >
                 Adresse E-mail
               </label>
@@ -52,7 +52,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="phone"
+                htmlFor="Téléphone"
               >
                 Numero de Téléphone
               </label>
@@ -68,7 +68,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="company"
+                htmlFor="Entreprise"
               >
                 Nom de l'Entreprise
               </label>
@@ -86,7 +86,7 @@ const Form = ({ width = "2/3" }) => {
           <div className="flex flex-col mt-4 md:w-full text-sm">
             <label
               className="mb-2 font-bold text-sm text-gray-800"
-              htmlFor="message"
+              htmlFor="Message"
             >
               Votre Message
             </label>
@@ -99,10 +99,10 @@ const Form = ({ width = "2/3" }) => {
               required
             ></textarea>
           </div>
-          {/* <div
+          <div
             className="g-recaptcha"
             data-sitekey="6Ldzb5IdAAAAAE0MWN7_Ejf3SFYXwGhWCbJsZ3-F"
-          ></div> */}
+          ></div>
 
           <div className="mt-10 md:mx-auto">
             <button
