@@ -17,7 +17,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="Nom Complet"
+                htmlFor="name"
               >
                 Nom Complet
               </label>
@@ -33,7 +33,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="Email"
+                htmlFor="email"
               >
                 Adresse E-mail
               </label>
@@ -52,7 +52,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="Téléphone"
+                htmlFor="phone"
               >
                 Numero de Téléphone
               </label>
@@ -68,7 +68,7 @@ const Form = ({ width = "2/3" }) => {
             <div className="flex flex-col mb-4 text-sm">
               <label
                 className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="Entreprise"
+                htmlFor="company"
               >
                 Nom de l'Entreprise
               </label>
@@ -86,7 +86,7 @@ const Form = ({ width = "2/3" }) => {
           <div className="flex flex-col mt-4 md:w-full text-sm">
             <label
               className="mb-2 font-bold text-sm text-gray-800"
-              htmlFor="Message"
+              htmlFor="message"
             >
               Votre Message
             </label>
@@ -100,7 +100,7 @@ const Form = ({ width = "2/3" }) => {
             ></textarea>
           </div>
           <div
-            className="g-recaptcha"
+            className="g-recaptcha my-3 md:my-5"
             data-sitekey="6Ldzb5IdAAAAAE0MWN7_Ejf3SFYXwGhWCbJsZ3-F"
           ></div>
 

@@ -86,5 +86,6 @@ module.exports = {
         domain: `sadisarl.com`,
       },
     },
+    `gatsby-plugin-recaptcha`,
   ],
 }
