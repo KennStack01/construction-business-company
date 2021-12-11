@@ -101,7 +101,7 @@ const Form = ({ width = "2/3" }) => {
           </div>
           <div
             className="g-recaptcha my-3 md:my-5"
-            data-sitekey="6Ldzb5IdAAAAAE0MWN7_Ejf3SFYXwGhWCbJsZ3-F"
+            data-sitekey="6LchGJUdAAAAAJvUVRBwdDoe3_akefS4KnNR2myz"
           ></div>
 
           <div className="mt-10 md:mx-auto">
