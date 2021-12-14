@@ -15,10 +15,15 @@ const PageContent = ({ data }) => {
       <SEO title={project.titreDuService} />
       <ContentHeroSection
         title={project.titreDuService}
-        description={project.shortDescriptionNode.internal.content}
+        description={project.shortDescriptionNode.childMarkdownRemark.html}
       />
-      <div className="my-10 mx-4 md:mx-10">
-        {project.fullDescriptionNode.internal.content}
+      <div
+        className="my-10 mx-4 md:mx-10 markdown"
+        dangerouslySetInnerHTML={{
+          __html: project.fullDescriptionNode.childMarkdownRemark.html,
+        }}
+      >
+        {/* {project.fullDescriptionNode.childMarkdownRemark.html} */}
       </div>
     </Layout>
   )
@@ -31,15 +36,15 @@ export const query = graphql`
     datoCmsCompanyService(slug: { eq: $slug }) {
       titreDuService
       shortDescriptionNode {
-        internal {
-          content
+        childMarkdownRemark {
+          html
         }
       }
       slug
       id
       fullDescriptionNode {
-        internal {
-          content
+        childMarkdownRemark {
+          html
         }
       }
     }

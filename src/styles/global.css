@@ -18,3 +18,7 @@ h3 {
 .mission {
   overflow-x: hidden;
 }
+
+.markdown {
+  white-space: pre-line;
+}
