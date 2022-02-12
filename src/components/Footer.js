@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="flex flex-col">
                 <Link to="/">
                   <h5 className="hover:underline hover:bg-back-color-500 p-1 rounded">
-                    Acceuil
+                    Accueil
                   </h5>
                 </Link>
                 <Link to="/services">
