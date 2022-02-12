@@ -70,14 +70,14 @@ export default function Header() {
               <h5 className="block">Réalisations</h5>
             </Link>
 
-            <Link
+            {/* <Link
               to="/actu"
               activeStyle={activeLinkStyles}
               activeClassName="active"
               className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
             >
               <h5 className="block">Actualités</h5>
-            </Link>
+            </Link> */}
 
             <Link
               to="/contact"
